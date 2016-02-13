@@ -10,7 +10,7 @@ var mw={
 	},
 	logger:function(req,res,next)
 	{
-		console.log((new Date()).toString()+'--'+req.maethod+'--'+req.originalUrl);
+		console.log((new Date()).toString()+'--'+req.maethod+'--	'+req.originalUrl);
 		next();
 	}
 }
@@ -18,7 +18,7 @@ var port=3000;
 //a1.use(mw.requireAuthentication);
 a1.use(mw.logger);
 a1.get('/about',mw.rA,function(req,res){
-	res.send('about us Fucker!!')
+	res.send('about! us Fucker!!')
 });
 console.log(__dirname+'\\public');
 a1.use(a.static(__dirname+'\\public'))
