@@ -11,7 +11,7 @@ a1.get('/about',mw.rA,function(req,res){
 	res.send('about! us Fucker!!')
 });
 console.log(__dirname+'\\public');
-a1.use(a.static(__dirname+'\\public'))
+a1.use(a.static(__dirname+'/public'))
 //a1.listen(3000);
 a1.listen(port,function(){
 	console.log('Server Started at '+port);
